@@ -102,12 +102,11 @@ body {
     height: 350px;
     margin-top: 100px;
 }
-
 .guarantee {
     margin-top: 50px;
     padding: 0 50px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -116,10 +115,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    width: 100%;
+    min-height: 100px;
+    flex: 1 1 calc(33.333% - 16px);
     border-radius: 10px;
-    padding: 0 30px;
+    padding: 20px;
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -131,6 +130,7 @@ body {
 }
 
 .guarantee .item .icon {
+    flex-shrink: 0;
     width: 46px;
     height: 46px;
     background: #fff;
@@ -146,34 +146,98 @@ body {
 }
 
 .guarantee .item .icon i {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .guarantee .item .info {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 15px;
 }
 
 .guarantee .item .info h3 {
     color: #E07B67;
-    font-size: 28px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .guarantee .item .info p {
     color: #fff;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .guarantee .item > i {
     color: #fff;
-    font-size: 30px;
+    font-size: 24px;
     transition: color 0.3s ease;
+    flex-shrink: 0;
 }
 
 .guarantee .item:hover > i {
     color: #E07B67;
+}
+
+.guarantee .item .icon img {
+    max-width: 100% ;
+    max-height: 100% ;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .guarantee .item {
+        flex-basis: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .guarantee {
+        padding: 0 20px;
+    }
+
+    .guarantee .item {
+        flex-basis: 100%;
+    }
+
+    .guarantee .item .info h3 {
+        font-size: 16px;
+    }
+
+    .guarantee .item .info p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .guarantee {
+        padding: 0 10px;
+    }
+
+    .guarantee .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .guarantee .item .icon {
+        margin-bottom: 10px;
+    }
+
+    .guarantee .item .info {
+        align-items: center;
+        padding: 0;
+    }
+
+    .guarantee .item > i {
+        display: none;
+    }
 }
 
 .seprator {
@@ -743,4 +807,41 @@ footer .cols .news-col form button i {
     width: 20px; 
     height: 2px; 
     background-color: #E07B67; 
+}
+
+
+.item {
+    position: relative;
+    cursor: pointer;
+}
+
+.item i {
+    transition: transform 0.3s ease;
+}
+
+.item:hover i {
+    transform: scale(1.2);
+}
+
+.item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.item:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
