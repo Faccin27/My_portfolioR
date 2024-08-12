@@ -61,7 +61,7 @@ body {
 }
 
 .hire-btn:hover {
-    background: #006494;
+    background: #942a00;
     transform: scale(1.05);
 }
 
@@ -102,6 +102,7 @@ body {
     height: 350px;
     margin-top: 100px;
 }
+
 .guarantee {
     margin-top: 50px;
     padding: 0 50px;
@@ -173,20 +174,20 @@ body {
     max-width: 100%;
 }
 
-.guarantee .item > i {
+.guarantee .item>i {
     color: #fff;
     font-size: 24px;
     transition: color 0.3s ease;
     flex-shrink: 0;
 }
 
-.guarantee .item:hover > i {
+.guarantee .item:hover>i {
     color: #E07B67;
 }
 
 .guarantee .item .icon img {
-    max-width: 100% ;
-    max-height: 100% ;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -235,7 +236,7 @@ body {
         padding: 0;
     }
 
-    .guarantee .item > i {
+    .guarantee .item>i {
         display: none;
     }
 }
@@ -257,8 +258,45 @@ body {
     padding: 0 50px;
 }
 
-.about img {
+.about .image-container {
+    flex-shrink: 0;
+}
+
+.about .image-frame {
     width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.about .image-frame:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.about .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.about .image-frame:hover img {
+    transform: scale(1.1);
+}
+
+.about .info {
+    flex-grow: 1;
 }
 
 .about .info h3 {
@@ -277,9 +315,20 @@ body {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 780px) {
+    .about {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about .image-container {
+        margin-bottom: 30px;
+    }
+}
+
 .portfolio {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
     gap: 80px;
     padding: 0 50px;
@@ -316,7 +365,7 @@ body {
 }
 
 .portfolio .portfo-items .item img {
-    width: auto; 
+    width: auto;
     height: 200px;
     border-radius: 10px 10px 0 0;
 }
@@ -346,7 +395,7 @@ body {
 }
 
 .portfolio .portfo-items .item .info a:hover {
-    color: #006494;
+    color: #942a00;
 }
 
 .skills {
@@ -533,7 +582,7 @@ footer .cols .news-col form button {
 }
 
 footer .cols .news-col form button:hover {
-    background-color: #006494;
+    background-color: #942a00;
 }
 
 footer .cols .news-col form button i {
@@ -712,7 +761,7 @@ footer .cols .news-col form button i {
 
     }
 }
- 
+
 
 .box {
     width: 280px;
@@ -724,7 +773,7 @@ footer .cols .news-col form button i {
     align-items: center;
     left: 50%;
     position: fixed;
-    top: calc(93%); 
+    top: calc(93%);
     left: calc(50%);
     transform: translateX(-50%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -734,15 +783,15 @@ footer .cols .news-col form button i {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; 
+    display: flex;
 }
 
 #part li {
     margin-left: 10px;
-    width: 40px; 
-    height: 40px; 
-    text-align: center; 
-    line-height: 40px; 
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
 }
 
 #part li:first-child {
@@ -753,11 +802,11 @@ footer .cols .news-col form button i {
     background: #252529;
     border-radius: 8px;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     color: white;
-    height: 100%; 
-    width: 100%; 
+    height: 100%;
+    width: 100%;
     text-decoration: none;
     font: 12px / 27px "PT Sans", Arial, sans-serif;
     transition: all 0.3s ease;
@@ -778,15 +827,15 @@ footer .cols .news-col form button i {
 }
 
 #part li a.bookmark:hover {
-    background: #79f899; 
+    background: #79f899;
 }
 
 #part li a.brain:hover {
-    background: #ffb4da; 
+    background: #ffb4da;
 }
 
 #part li a.envelope:hover {
-    background: #fa4f4f; 
+    background: #fa4f4f;
 }
 
 .box i {
@@ -801,12 +850,12 @@ footer .cols .news-col form button i {
 #part li a.current::after {
     content: "";
     position: absolute;
-    bottom: -5px; 
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 20px; 
-    height: 2px; 
-    background-color: #E07B67; 
+    width: 20px;
+    height: 2px;
+    background-color: #E07B67;
 }
 
 
@@ -844,4 +893,33 @@ footer .cols .news-col form button i {
 .item:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.view-all-btn {
+    background: #E07B67;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: #942a00;
+    transform: translateY(-3px);
+}
+
+.view-all-btn i {
+    margin-left: 10px;
+    font-size: 24px;
 }
