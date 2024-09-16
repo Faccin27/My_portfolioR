@@ -761,7 +761,6 @@ footer .cols .news-col form button i {
   height: 60px;
   background-color: #17171a;
   border-radius: 15px;
-  opacity: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -914,6 +913,7 @@ footer .cols .news-col form button i {
   margin-left: 10px;
   font-size: 24px;
 }
+
 .modal {
   display: none;
   position: fixed;
