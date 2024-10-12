@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             id: 2,
-            titulo: 'Music App',
-            descricao: 'A website and music player app integrating Spotify and YouTube Music APIs. Play, download songs, create, export, and import playlists—offering a more advanced and flexible experience than Spotify.',
+            titulo: 'E-gest',
+            descricao: 'e-Gest streamlines the management of people and addresses via the SUS API, offering a user-friendly way to handle personal data, addresses, and vaccination status.',
             imagem: 'assets/sc5.png',
-            link: 'https://github.com/Faccin27/Music_App',
-            videoId: 'j8fXIvwU_mo'
+            link: 'https://github.com/Faccin27/e-gest_front-end',
+            videoId: '6cqg9oKyc_Y'
         },
         {
             id: 3,
