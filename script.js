@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             descricao: 'This script logs keystrokes and mouse clicks, associates them with the active window, and sends the data to a Discord webhook. Events are captured in real-time and transmitted every 5 seconds.',
             imagem: 'assets/sc4.jpg',
             link: 'https://github.com/Faccin27/keylogger-KeystrokeToDiscord',
-            videoId: 'j8fXIvwU_mo'
+            videoId: 'V65uIjrCBGg'
         },
         {
             id: 2,
